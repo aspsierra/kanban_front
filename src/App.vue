@@ -1,5 +1,16 @@
-<script setup>
+<script>
 import HelloWorld from './components/HelloWorld.vue'
+
+export default {
+  components: {
+    HelloWorld
+  },
+  async mounted() {
+    console.log(await this.$api.getAllKanbans());
+    
+    
+  },
+}
 </script>
 
 <template>
